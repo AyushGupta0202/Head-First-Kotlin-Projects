@@ -1,0 +1,46 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.lang.Thread.sleep
+import java.util.*
+import kotlin.random.Random
+
+fun main() {
+
+    val x = Random
+    val y = x.nextInt(1, 5)
+    println("$x\n$y")
+
+//    for (i in 1..80) {
+//
+//        sleep(200)
+//        println(generatePhrase())
+//    }
+
+
+    var g = 4
+    var p = g
+    g = p
+
+    var br = BufferedReader(InputStreamReader(System.`in`))
+    var st = br.readLine()
+    println("st = ${st}")
+
+}
+
+fun generatePhrase(): String {
+    val wordArray1 = arrayOf("24/7", "multi-tier", "B-to-B", "dynamic", "pervasive")
+    val wordArray2 = arrayOf("empowered", "leveraged", "aligned", "targeted")
+    val wordArray3 = arrayOf("process", "paradigm", "solution", "portal", "vision")
+
+    val arraySize1 = wordArray1.size
+    val arraySize2 = wordArray2.size
+    val arraySize3 = wordArray3.size
+
+    val rand1 = (Math.random() * arraySize1).toInt()
+    val rand2 = (Math.random() * arraySize2).toInt()
+    val rand3 = (Math.random() * arraySize3).toInt()
+
+//    val phrase = wordArray1[rand1] + " " + wordArray2[rand2] + " " + wordArray3[rand3]
+
+    return "${wordArray1[rand1]} ${wordArray2[rand2]} ${wordArray3[rand3]}"
+}
